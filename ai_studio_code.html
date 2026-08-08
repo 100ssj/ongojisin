@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 기반 온고지신 프로젝트로 미래 생태 시민 기르기</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        section { scroll-margin-top: 100px; }
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scroll-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 1. 헤더 (인라인 이미지 타이틀) -->
+    <header class="bg-white border-b border-gray-100 py-8 text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight leading-relaxed flex flex-wrap items-center justify-center gap-x-2">
+                <span>디지털 기반</span>
+                <img src="https://drive.google.com/thumbnail?id=1dA4oOx5EnFEayvQf7SRF-ryu6n2qXNd_&sz=w1200" 
+                     alt="온고지신" 
+                     class="h-9 md:h-12 object-contain inline-block align-middle mx-1"
+                     onerror="this.style.display='none'; document.getElementById('fallback-text').classList.remove('hidden');">
+                <span id="fallback-text" class="hidden text-emerald-600">온고지신</span>
+                <span>프로젝트로</span>
+                <span class="text-sky-600 whitespace-nowrap">미래 생태 시민</span>
+                <span>기르기</span>
+            </h1>
+            <p class="text-sm text-gray-500 mt-4">연구 보고서 및 프로젝트 일반화 아카이브</p>
+        </div>
+    </header>
+
+    <!-- 2. 상단 고정 로마자 네비게이션 바 -->
+    <nav class="sticky top-0 bg-white/95 backdrop-blur shadow-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div id="nav-container" class="flex overflow-x-auto py-3 space-x-2 md:space-x-4 justify-start md:justify-between scrollbar-none items-center text-center">
+                <a href="#section-1" data-section="section-1" class="nav-item flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-100 transition duration-300 whitespace-nowrap">
+                    Ⅰ. 연구 필요성 및 목적
+                </a>
+                <a href="#section-2" data-section="section-2" class="nav-item flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-100 transition duration-300 whitespace-nowrap">
+                    Ⅱ. 연구 방법
+                </a>
+                <a href="#section-3" data-section="section-3" class="nav-item flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-100 transition duration-300 whitespace-nowrap">
+                    Ⅲ. 연구 내용
+                </a>
+                <a href="#section-4" data-section="section-4" class="nav-item flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-100 transition duration-300 whitespace-nowrap">
+                    Ⅳ. 연구 결과
+                </a>
+                <a href="#section-5" data-section="section-5" class="nav-item flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold bg-emerald-50 text-emerald-700 border border-emerald-100 hover:bg-emerald-100 transition duration-300 whitespace-nowrap">
+                    Ⅴ. 결론 및 일반화
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. 메인 목차 영역 -->
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+
+        <!-- Ⅰ. 연구의 필요성 및 목적 -->
+        <section id="section-1" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition duration-500">
+            <div class="flex items-center space-x-3 mb-6 border-b border-gray-100 pb-4">
+                <span class="text-2xl font-black text-emerald-600">Ⅰ</span>
+                <h2 class="text-2xl font-extrabold text-gray-900">연구의 필요성 및 목적</h2>
+            </div>
+            
+            <div class="grid gap-3">
+                <!-- 01. 연구의 필요성 -->
+                <button onclick="openModal('modal-necessity')" class="w-full text-left p-4 bg-white rounded-xl border border-emerald-200 hover:border-emerald-500 hover:bg-emerald-50/20 transition group flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xs font-bold text-emerald-600">01</span>
+                        <h3 class="font-bold text-emerald-800 text-lg group-hover:text-emerald-950 transition">연구의 필요성</h3>
+                    </div>
+                    <div class="flex items-center space-x-1 text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <span>상세 보기</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </button>
+
+                <!-- 02. 연구의 목적 -->
+                <button onclick="openModal('modal-purpose')" class="w-full text-left p-4 bg-white rounded-xl border border-emerald-200 hover:border-emerald-500 hover:bg-emerald-50/20 transition group flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xs font-bold text-emerald-600">02</span>
+                        <h3 class="font-bold text-emerald-800 text-lg group-hover:text-emerald-950 transition">연구의 목적</h3>
+                    </div>
+                    <div class="flex items-center space-x-1 text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <span>상세 보기</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </button>
+
+                <!-- 03. 용어의 정의 -->
+                <button onclick="openModal('modal-definition')" class="w-full text-left p-4 bg-white rounded-xl border border-emerald-200 hover:border-emerald-500 hover:bg-emerald-50/20 transition group flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xs font-bold text-emerald-600">03</span>
+                        <h3 class="font-bold text-emerald-800 text-lg group-hover:text-emerald-950 transition">용어의 정의 및 설계 구도</h3>
+                    </div>
+                    <div class="flex items-center space-x-1 text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <span>상세 보기</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </button>
+
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">04</span>
+                    <h3 class="font-bold text-gray-800 text-lg">이론적 배경</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">05</span>
+                    <h3 class="font-bold text-gray-800 text-lg">선행 연구 분석 및 본 연구의 차별성</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ⅱ. 연구 방법 -->
+        <section id="section-2" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition duration-500">
+            <div class="flex items-center space-x-3 mb-6 border-b border-gray-100 pb-4">
+                <span class="text-2xl font-black text-emerald-600">Ⅱ</span>
+                <h2 class="text-2xl font-extrabold text-gray-900">연구 방법</h2>
+            </div>
+            
+            <div class="grid gap-3">
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">01</span>
+                    <h3 class="font-bold text-gray-800 text-lg">연구의 대상 및 절차</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">02</span>
+                    <h3 class="font-bold text-gray-800 text-lg">공동 연구의 필요성</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">03</span>
+                    <h3 class="font-bold text-gray-800 text-lg">검증 방안</h3>
+                </div>
+                
+                <!-- 04. 실태 조사 -->
+                <button onclick="openModal('modal-survey')" class="w-full text-left p-4 bg-white rounded-xl border border-emerald-200 hover:border-emerald-500 hover:bg-emerald-50/20 transition group flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xs font-bold text-emerald-600">04</span>
+                        <h3 class="font-bold text-emerald-800 text-lg group-hover:text-emerald-950 transition">실태 조사</h3>
+                    </div>
+                    <div class="flex items-center space-x-1 text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1.5 rounded-lg group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <span>상세 보기</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Ⅲ. 연구 내용 -->
+        <section id="section-3" class="bg-white p-8 rounded-2xl shadow-sm border border-emerald-100 bg-emerald-50/10 transition duration-500">
+            <div class="flex items-center space-x-3 mb-6 border-b border-emerald-100 pb-4">
+                <span class="text-2xl font-black text-emerald-600">Ⅲ</span>
+                <h2 class="text-2xl font-extrabold text-gray-900">연구 내용</h2>
+            </div>
+
+            <div class="grid gap-3">
+                <div class="p-4 bg-white border border-emerald-100 rounded-xl shadow-xs flex items-center space-x-4">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">연구 과제 1</span>
+                    <h3 class="text-base font-bold text-gray-900">온고지신 프로젝트의 인적·물적 연구 기반 조성</h3>
+                </div>
+                <div class="p-4 bg-white border border-emerald-100 rounded-xl shadow-xs flex items-center space-x-4">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">연구 과제 2</span>
+                    <h3 class="text-base font-bold text-gray-900">온고지신 프로젝트의 공동 설계·적용</h3>
+                </div>
+                
+                <!-- 연구 과제 3 -->
+                <button onclick="openModal('modal-generalization')" class="w-full text-left p-4 bg-white border border-sky-200 hover:border-sky-500 hover:bg-sky-50/30 rounded-xl shadow-xs transition group flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">연구 과제 3</span>
+                        <h3 class="text-base font-bold text-sky-900 group-hover:text-sky-950 transition">미래 역량 함양의 효과성 검증 및 일반화 자료</h3>
+                    </div>
+                    <div class="flex items-center space-x-1 text-xs font-semibold text-sky-700 bg-sky-100/60 px-3 py-1.5 rounded-lg group-hover:bg-sky-600 group-hover:text-white transition whitespace-nowrap">
+                        <span>상세 보기</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Ⅳ. 연구 결과 -->
+        <section id="section-4" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition duration-500">
+            <div class="flex items-center space-x-3 mb-6 border-b border-gray-100 pb-4">
+                <span class="text-2xl font-black text-emerald-600">Ⅳ</span>
+                <h2 class="text-2xl font-extrabold text-gray-900">연구 결과</h2>
+            </div>
+            
+            <div class="grid gap-3">
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">01</span>
+                    <h3 class="font-bold text-gray-800 text-lg">연구 결과 검증 방법</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">02</span>
+                    <h3 class="font-bold text-gray-800 text-lg">양적 검증 결과 및 분석</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">03</span>
+                    <h3 class="font-bold text-gray-800 text-lg">질적 검증 결과 및 분석</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ⅴ. 결론 및 일반화 -->
+        <section id="section-5" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition duration-500">
+            <div class="flex items-center space-x-3 mb-6 border-b border-gray-100 pb-4">
+                <span class="text-2xl font-black text-emerald-600">Ⅴ</span>
+                <h2 class="text-2xl font-extrabold text-gray-900">결론 및 일반화</h2>
+            </div>
+            
+            <div class="grid gap-3">
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">01</span>
+                    <h3 class="font-bold text-gray-800 text-lg">연구의 결론</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">02</span>
+                    <h3 class="font-bold text-gray-800 text-lg">일반화 가능성</h3>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center space-x-4">
+                    <span class="text-xs font-bold text-emerald-600">03</span>
+                    <h3 class="font-bold text-gray-800 text-lg">제언</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-white border-t border-gray-100 py-10 text-center">
+        <p class="text-sm text-gray-500">&copy; 디지털 기반 온고지신 프로젝트 연구회. All rights reserved.</p>
+    </footer>
+
+
+    <!-- ========================================== -->
+    <!-- 4. 통합 모달(팝업) 영역                    -->
+    <!-- ========================================== -->
+
+    <!-- [모달 1] 01. 연구의 필요성 -->
+    <div id="modal-necessity" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-white border-b border-gray-100 p-4 px-6 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md">01</span>
+                    <span class="font-bold text-gray-800 text-sm">연구의 필요성 (Necessity)</span>
+                </div>
+                <button onclick="closeModal('modal-necessity')" class="text-xs text-gray-500 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition font-medium">✕ 닫기</button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+                <div class="border-b border-gray-100 pb-4">
+                    <h2 class="text-2xl font-black text-gray-900">연구의 필요성</h2>
+                    <p class="text-gray-500 text-sm mt-1">시대적, 교육적, 학습자 관점에서의 프로젝트 도입 필요성 분석</p>
+                </div>
+                <div class="grid gap-6">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-200/80 space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-sky-600 text-white text-xs font-black px-2.5 py-1 rounded">가</span>
+                            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">시대적 요구</span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900">"왜 디지털 기반 생태전환교육이 필수적인가?"</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed pt-1">
+                            기후 위기와 생태계 파괴, 디지털 대전환 시대를 마주하여 전 지구적 생태 문제를 통찰하고, 디지털 기술을 활용해 지속가능한 발전을 위해 실천하는 <strong class="text-emerald-700">미래 생태 시민</strong>을 기르고자 합니다.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-200/80 space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-emerald-600 text-white text-xs font-black px-2.5 py-1 rounded">나</span>
+                            <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">교육적 요구</span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900">"왜 전래동화를 매개로 한 교수·학습 모델인가?"</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed pt-1">
+                            2022 개정 교육과정 연계. 학생들에게 친숙한 <strong>전래동화를 현대의 환경 위기 상황과 연결</strong>하고 실제적 미디어 자료를 분석·실천하는 융합 교수·학습 모델을 제시하고자 합니다.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-200/80 space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-amber-500 text-white text-xs font-black px-2.5 py-1 rounded">다</span>
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">학습자 요구</span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900">"왜 일상에서 세계로 확장하는 탐구인가?"</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            초등 5~6학년의 발달 단계 특성에 맞추어, 가장 친숙한 일상 공간에서 출발해 시야를 넓히는 다차원적 탐구 경험을 제공합니다.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs font-bold pt-2">
+                            <div class="p-2.5 bg-white rounded-xl border border-gray-200 text-emerald-800">1. 우리가 사는 곳</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-gray-200 text-emerald-800">2. 우리 지역</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-gray-200 text-emerald-800">3. 우리나라</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-gray-200 text-emerald-800">4. 세계</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [모달 2] 02. 연구의 목적 -->
+    <div id="modal-purpose" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-white border-b border-gray-100 p-4 px-6 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md">02</span>
+                    <span class="font-bold text-gray-800 text-sm">연구의 목적 (Purpose)</span>
+                </div>
+                <button onclick="closeModal('modal-purpose')" class="text-xs text-gray-500 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition font-medium">✕ 닫기</button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+                <div class="border-b border-gray-100 pb-4">
+                    <h2 class="text-2xl font-black text-gray-900">연구의 목적</h2>
+                    <p class="text-gray-500 text-sm mt-1">전래동화 연계 디지털 교수학습 모델 개발 및 미래 생태 시민 육성</p>
+                </div>
+                <div class="bg-emerald-50/60 border border-emerald-100 p-5 rounded-2xl text-gray-700 text-sm md:text-base leading-relaxed">
+                    본 연구에서는 전래동화를 현대의 환경 위기 상황과 연결한 디지털 기반 <strong class="text-emerald-700">온고지신</strong> 프로젝트를 개발·적용하고자 한다. 실제적 미디어 자료를 바탕으로 환경 문제를 분석하고 해결 방안을 설계·실천함으로써 <strong class="text-sky-700">미래 역량</strong>을 지닌 <strong class="text-emerald-700">미래 생태 시민</strong>을 기르는 데 목적이 있다.
+                </div>
+                <div class="space-y-3">
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-gray-200 flex items-start space-x-3">
+                        <span class="bg-emerald-600 text-white font-black text-xs px-2.5 py-1 rounded whitespace-nowrap mt-0.5">첫째</span>
+                        <p class="text-gray-800 font-bold text-sm md:text-base"><strong class="text-emerald-700">온고지신</strong> 프로젝트 실행을 위한 인적·물적 연구 기반을 조성한다.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-gray-200 flex items-start space-x-3">
+                        <span class="bg-emerald-600 text-white font-black text-xs px-2.5 py-1 rounded whitespace-nowrap mt-0.5">둘째</span>
+                        <p class="text-gray-800 font-bold text-sm md:text-base"><strong class="text-emerald-700">온고지신</strong> 프로젝트를 공동으로 설계·적용하여 깊이 있는 학습을 구현한다.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-gray-200 flex items-start space-x-3">
+                        <span class="bg-emerald-600 text-white font-black text-xs px-2.5 py-1 rounded whitespace-nowrap mt-0.5">셋째</span>
+                        <p class="text-gray-800 font-bold text-sm md:text-base"><strong class="text-emerald-700">온고지신</strong> 프로젝트로 <strong class="text-sky-700">미래 역량</strong> 함양의 효과성을 검증하고 일반화한다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [모달 3] 03. 용어의 정의 및 설계 구도 -->
+    <div id="modal-definition" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-white border-b border-gray-100 p-4 px-6 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md">03</span>
+                    <span class="font-bold text-gray-800 text-sm">용어의 정의 및 설계 구도</span>
+                </div>
+                <button onclick="closeModal('modal-definition')" class="text-xs text-gray-500 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition font-medium">✕ 닫기</button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto space-y-8">
+                <div>
+                    <h2 class="text-2xl font-black text-gray-900">프로젝트 연구 설계 및 용어 정의</h2>
+                    <p class="text-gray-500 text-sm mt-1">4대 전래동화 연계 프로젝트 흐름, 탐구 4단계 및 미래 핵심 역량 구도</p>
+                </div>
+
+                <!-- 4대 소프로젝트 -->
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-white border-t-4 border-emerald-600 rounded-2xl p-4 shadow-xs border border-gray-100 space-y-2">
+                        <span class="text-xs font-bold text-emerald-600">온 프로젝트</span>
+                        <h4 class="font-black text-base">육상생태계 보호</h4>
+                        <p class="text-xs text-gray-600">흥부전 (범위: 우리가 사는 곳)</p>
+                    </div>
+                    <div class="bg-white border-t-4 border-amber-500 rounded-2xl p-4 shadow-xs border border-gray-100 space-y-2">
+                        <span class="text-xs font-bold text-amber-500">고 프로젝트</span>
+                        <h4 class="font-black text-base">지속가능한 소비·생산</h4>
+                        <p class="text-xs text-gray-600">콩쥐팥쥐 (범위: 우리 지역)</p>
+                    </div>
+                    <div class="bg-white border-t-4 border-sky-500 rounded-2xl p-4 shadow-xs border border-gray-100 space-y-2">
+                        <span class="text-xs font-bold text-sky-500">지 프로젝트</span>
+                        <h4 class="font-black text-base">해양생태계 보존</h4>
+                        <p class="text-xs text-gray-600">별주부전 (범위: 우리나라)</p>
+                    </div>
+                    <div class="bg-white border-t-4 border-purple-500 rounded-2xl p-4 shadow-xs border border-gray-100 space-y-2">
+                        <span class="text-xs font-bold text-purple-500">신 프로젝트</span>
+                        <h4 class="font-black text-base">기후변화와 대응</h4>
+                        <p class="text-xs text-gray-600">해님달님 (범위: 세계)</p>
+                    </div>
+                </div>
+
+                <!-- 탐구 4단계 -->
+                <div class="grid md:grid-cols-4 gap-3 text-xs">
+                    <div class="p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100">
+                        <strong class="text-emerald-800 text-sm block mb-1">1. 온고 (溫故)</strong>
+                        <p class="text-gray-600">전래동화 속 생태 쟁점 발견 및 질문 구성</p>
+                    </div>
+                    <div class="p-4 bg-amber-50/50 rounded-2xl border border-amber-100">
+                        <strong class="text-amber-800 text-sm block mb-1">2. 고찰 (考察)</strong>
+                        <p class="text-gray-600">실제적 미디어 자료 심층 분석 및 탐구</p>
+                    </div>
+                    <div class="p-4 bg-sky-50/50 rounded-2xl border border-sky-100">
+                        <strong class="text-sky-800 text-sm block mb-1">3. 지혜 (知慧)</strong>
+                        <p class="text-gray-600">디지털 기술을 활용한 해결 아이디어 구체화</p>
+                    </div>
+                    <div class="p-4 bg-purple-50/50 rounded-2xl border border-purple-100">
+                        <strong class="text-purple-800 text-sm block mb-1">4. 혁신 (革新)</strong>
+                        <p class="text-gray-600">생활 속 실천 및 성찰·공동체 확산</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [모달 4] 04. 실태 조사 -->
+    <div id="modal-survey" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-white border-b border-gray-100 p-4 px-6 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md">04</span>
+                    <span class="font-bold text-gray-800 text-sm">실태 조사 (Status Survey)</span>
+                </div>
+                <button onclick="closeModal('modal-survey')" class="text-xs text-gray-500 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition font-medium">✕ 닫기</button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+                <div>
+                    <h2 class="text-2xl font-black text-gray-900">실태 조사 분석 및 시사점</h2>
+                    <p class="text-gray-500 text-sm mt-1">학생들의 생태·디지털 교육 인식 및 사전 역량 진단 데이터</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-gray-200 text-xs md:text-sm space-y-2">
+                        <span class="bg-sky-600 text-white font-bold px-2 py-0.5 rounded text-[11px]">가. 인식 조사</span>
+                        <h4 class="font-bold text-gray-900 text-base">생태 교육 및 디지털 기기 활용 수업 욕구</h4>
+                        <p class="text-gray-600 leading-relaxed">수동적·정형화된 일회성 교육을 넘어, 학생 스스로 디지털 도구를 활용해 문제를 진단하고 능동적으로 해결하려는 내재적 동기가 매우 높은 상태임.</p>
+                    </div>
+
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-gray-200 text-xs md:text-sm space-y-2">
+                        <span class="bg-emerald-600 text-white font-bold px-2 py-0.5 rounded text-[11px]">나. 사전 역량 실태</span>
+                        <h4 class="font-bold text-gray-900 text-base">미래 생태 시민 3대 역량 측정 결과</h4>
+                        <div class="grid md:grid-cols-3 gap-2 pt-2 text-center">
+                            <div class="p-3 bg-white rounded-xl border border-gray-200">
+                                <span class="text-gray-500 block text-xs">문제해결력</span>
+                                <strong class="text-red-600 text-base">사전 평균 2.68점</strong>
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-gray-200">
+                                <span class="text-gray-500 block text-xs">디지털 리터러시</span>
+                                <strong class="text-emerald-600 text-base">사전 평균 2.71점</strong>
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-gray-200">
+                                <span class="text-gray-500 block text-xs">생태 감수성</span>
+                                <strong class="text-sky-600 text-base">사전 평균 2.71점</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- [모달 5] 연구 과제 3. 프로젝트 일반화 자료 -->
+    <div id="modal-generalization" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-white border-b border-gray-100 p-4 px-6 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-md">연구 과제 3</span>
+                    <span class="font-bold text-gray-800 text-sm">02 프로젝트 일반화 자료</span>
+                </div>
+                <button onclick="closeModal('modal-generalization')" class="text-xs text-gray-500 hover:text-gray-800 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition font-medium">✕ 닫기</button>
+            </div>
+            <div class="p-6 md:p-8 overflow-y-auto space-y-8">
+                <div>
+                    <h2 class="text-2xl font-black text-gray-900">02 프로젝트 일반화 자료</h2>
+                    <p class="text-gray-500 text-sm mt-1">온·고·지·신 4개 프로젝트별 단계별 핵심 자원 및 보조 수업 템플릿 모음</p>
+                </div>
+
+                <!-- Part 1. 프로젝트별 3개 핵심자원 (총 12개) -->
+                <div class="space-y-6">
+                    <h3 class="font-black text-lg text-gray-900 border-b border-gray-200 pb-2">1. 프로젝트별 단계별 핵심 자료</h3>
+                    
+                    <!-- 온 -->
+                    <div class="bg-slate-50 p-4 rounded-2xl space-y-3">
+                        <div class="flex items-center space-x-2"><span class="w-6 h-6 rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center">온</span><strong class="text-sm">온 프로젝트 (흥부전)</strong></div>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <a href="https://docs.google.com/presentation/d/1r8vfhwUdy-9EZW0gKtYbShPTMro3RTdzz9Z8CWK0lHI/copy" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-emerald-500 flex justify-between items-center text-xs font-bold"><span>구글 슬라이드 흥부전</span><span class="text-emerald-600">바로가기 ➔</span></a>
+                            <a href="https://padlet.com/100ssj/padlet-pmfsofk0ha031gwl" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-emerald-500 flex justify-between items-center text-xs font-bold"><span>패들렛 미디어 자료</span><span class="text-emerald-600">바로가기 ➔</span></a>
+                            <a href="https://quiz.zep.us/play/N3qbp7" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-emerald-500 flex justify-between items-center text-xs font-bold"><span>프로젝트 연결 젭퀴즈</span><span class="text-emerald-600">바로가기 ➔</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 고 -->
+                    <div class="bg-slate-50 p-4 rounded-2xl space-y-3">
+                        <div class="flex items-center space-x-2"><span class="w-6 h-6 rounded-lg bg-amber-500 text-white font-bold text-xs flex items-center justify-center">고</span><strong class="text-sm">고 프로젝트 (콩쥐팥쥐)</strong></div>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <a href="https://docs.google.com/presentation/d/1SOC83WyNn3XHM6FlSUNWRuXBINYbt4RHBzvbmfkKk_s/copy" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-amber-500 flex justify-between items-center text-xs font-bold"><span>구글 슬라이드 콩쥐팥쥐</span><span class="text-amber-600">바로가기 ➔</span></a>
+                            <a href="https://padlet.com/100ssj/padlet-emlmjjjfyfx2ckix" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-amber-500 flex justify-between items-center text-xs font-bold"><span>패들렛 미디어 자료</span><span class="text-amber-600">바로가기 ➔</span></a>
+                            <a href="https://quiz.zep.us/play/Z9G5Rq" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-amber-500 flex justify-between items-center text-xs font-bold"><span>프로젝트 연결 젭퀴즈</span><span class="text-amber-600">바로가기 ➔</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 지 -->
+                    <div class="bg-slate-50 p-4 rounded-2xl space-y-3">
+                        <div class="flex items-center space-x-2"><span class="w-6 h-6 rounded-lg bg-sky-500 text-white font-bold text-xs flex items-center justify-center">지</span><strong class="text-sm">지 프로젝트 (별주부전)</strong></div>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <a href="https://docs.google.com/presentation/d/1gWO1A0fZ2IOHq9uslk8pR98givv1k4u_nmuR_9FLBGY/copy" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-sky-500 flex justify-between items-center text-xs font-bold"><span>구글 슬라이드 별주부전</span><span class="text-sky-600">바로가기 ➔</span></a>
+                            <a href="https://padlet.com/100ssj/padlet-ktkmht3c8ye10e1" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-sky-500 flex justify-between items-center text-xs font-bold"><span>패들렛 미디어 자료</span><span class="text-sky-600">바로가기 ➔</span></a>
+                            <a href="https://quiz.zep.us/play/qnKoQL" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-sky-500 flex justify-between items-center text-xs font-bold"><span>프로젝트 연결 젭퀴즈</span><span class="text-sky-600">바로가기 ➔</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 신 -->
+                    <div class="bg-slate-50 p-4 rounded-2xl space-y-3">
+                        <div class="flex items-center space-x-2"><span class="w-6 h-6 rounded-lg bg-purple-500 text-white font-bold text-xs flex items-center justify-center">신</span><strong class="text-sm">신 프로젝트 (해님달님)</strong></div>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <a href="https://docs.google.com/presentation/d/1bqCaqXe3NzI4LA_pDEVTba6SOcWlfvKHSryDZv0drLI/copy" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-purple-500 flex justify-between items-center text-xs font-bold"><span>구글 슬라이드 해님달님</span><span class="text-purple-600">바로가기 ➔</span></a>
+                            <a href="https://padlet.com/100ssj/padlet-xgrgnzkt88dv9fdu" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-purple-500 flex justify-between items-center text-xs font-bold"><span>패들렛 미디어 자료</span><span class="text-purple-600">바로가기 ➔</span></a>
+                            <a href="https://quiz.zep.us/play/Ov3npa" target="_blank" class="p-3 bg-white rounded-xl border border-gray-200 hover:border-purple-500 flex justify-between items-center text-xs font-bold"><span>프로젝트 연결 젭퀴즈</span><span class="text-purple-600">바로가기 ➔</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part 2. 그 밖의 수업 템플릿 및 자료 (총 8개) -->
+                <div class="space-y-4 pt-4 border-t border-gray-100">
+                    <h3 class="font-black text-lg text-gray-900">2. 그 밖의 수업 템플릿 및 자료</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs font-bold">
+                        <a href="https://padlet.com/100ssj/see-think-wonder-dl5ivjdrqcjde6r3" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[온] See Think Wonder 패들렛</span><span>➔</span></a>
+                        <a href="https://www.canva.com/design/DAHRMRES2_M/KviIKB6f_SZd1_DtQ2abow/view?utm_content=DAHRMRES2_M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[온] 식물도감 캔바 템플릿</span><span>➔</span></a>
+                        <a href="#" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[고] 생명존중 실태 설문지</span><span>➔</span></a>
+                        <a href="https://www.canva.com/design/DAHRMBVTqLc/ehzSkZd47viHKmYORrHWFg/view?utm_content=DAHRMBVTqLc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[고] 생명존중 신문 캔바</span><span>➔</span></a>
+                        <a href="https://script.google.com/macros/s/AKfycbyE84xQteO0CsVsKWkc0V_bZknIAcyGDXSlt1y0LSdC5mzqvKAZH-dy2VReGOFjo_AeA/exec" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[지] 해양 플로깅 기록 어플</span><span>➔</span></a>
+                        <a href="https://docs.google.com/document/d/11tj_0QZTTiP90hd8najZX6TWqCsWZP35ewuzP_w941M/edit?usp=sharing" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[지] 어플 일반화 소스코드</span><span>➔</span></a>
+                        <a href="#" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[신] 미래 역량 진단 검사지</span><span>➔</span></a>
+                        <a href="https://notebook.google.com/notebook/bdcd029f-2919-42d3-94c6-709feb2ddfa1?utm_source=gemini_notebook&utm_medium=referral&hl=ko&pli=1" target="_blank" class="p-3 bg-slate-50 hover:bg-slate-800 hover:text-white rounded-xl border border-gray-200 transition flex justify-between items-center"><span>[신] NotebookLM AI 챗봇</span><span>➔</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- 5. JavaScript 스크립트                    -->
+    <!-- ========================================== -->
+    <script>
+        // 모달 열기/닫기 함수
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // ScrollSpy (상단 로마자 탭 스크롤 강조)
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('main > section');
+            const navItems = document.querySelectorAll('.nav-item');
+
+            const options = {
+                root: null,
+                rootMargin: '-120px 0px -50% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeId = entry.target.getAttribute('id');
+                        
+                        navItems.forEach(item => {
+                            if (item.getAttribute('data-section') === activeId) {
+                                item.classList.remove('bg-emerald-50', 'text-emerald-700', 'border-emerald-100');
+                                item.classList.add('bg-emerald-600', 'text-white', 'border-transparent');
+                            } else {
+                                item.classList.remove('bg-emerald-600', 'text-white', 'border-transparent');
+                                item.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-100');
+                            }
+                        });
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
