@@ -14,7 +14,7 @@ window.ONGOJISIN_DATA = {
     {project:'go', type:'슬라이드', title:'콩쥐팥쥐 프로젝트 수업 슬라이드', purpose:'자원 낭비 문제와 지속가능한 소비를 탐구합니다.', tool:'구글 슬라이드', url:'https://docs.google.com/presentation/d/1SOC83WyNn3XHM6FlSUNWRuXBINYbt4RHBzvbmfkKk_s/copy', action:'사본 만들기'},
     {project:'go', type:'미디어', title:'콩쥐팥쥐 탐구 미디어 자료', purpose:'자원 순환과 소비·생산 관련 자료를 분석합니다.', tool:'패들렛', url:'https://padlet.com/100ssj/padlet-emlmjjjfyfx2ckix', action:'자료 보기'},
     {project:'go', type:'퀴즈', title:'고 프로젝트 연결 퀴즈', purpose:'학습을 정리하고 다음 탐구로 연결합니다.', tool:'젭 퀴즈', url:'https://quiz.zep.us/play/Z9G5Rq', action:'퀴즈 시작'},
-    {project:'go', type:'설문지', title:'생명존중 실태 설문지', purpose:'우리 학교의 생명 존중 실태를 조사합니다.', tool:'구글 설문지', url:null, action:'준비 중'},
+    {project:'go', type:'설문지', title:'생명존중 실태 설문지', purpose:'우리 학교의 생명 존중 실태를 조사합니다.', tool:'구글 설문지', url:'https://docs.google.com/forms/d/15BiavrHlP0ejXeoMKNKJp1ghTKh8fnbcasC3DmXKY_I/copy', action:'사본 만들기'},
     {project:'go', type:'템플릿', title:'생명존중 신문 만들기', purpose:'조사 데이터를 그래프로 표현해 보도자료를 제작합니다.', tool:'캔바', url:'https://www.canva.com/design/DAHRMBVTqLc/ehzSkZd47viHKmYORrHWFg/view?utm_content=DAHRMBVTqLc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview', action:'미리보기'},
     {project:'ji', type:'슬라이드', title:'별주부전 프로젝트 수업 슬라이드', purpose:'해양 오염과 생태계 보존 방안을 탐구합니다.', tool:'구글 슬라이드', url:'https://docs.google.com/presentation/d/1gWO1A0fZ2IOHq9uslk8pR98givv1k4u_nmuR_9FLBGY/copy', action:'사본 만들기'},
     {project:'ji', type:'미디어', title:'별주부전 탐구 미디어 자료', purpose:'해양 쓰레기·오염·생물 관련 자료를 분석합니다.', tool:'패들렛', url:'https://padlet.com/100ssj/padlet-ktkmht3c8ye10e1', action:'자료 보기'},
@@ -24,7 +24,7 @@ window.ONGOJISIN_DATA = {
     {project:'sin', type:'슬라이드', title:'해님달님 프로젝트 수업 슬라이드', purpose:'기후변화 데이터를 읽고 탄소중립 해법을 탐구합니다.', tool:'구글 슬라이드', url:'https://docs.google.com/presentation/d/1bqCaqXe3NzI4LA_pDEVTba6SOcWlfvKHSryDZv0drLI/copy', action:'사본 만들기'},
     {project:'sin', type:'미디어', title:'해님달님 탐구 미디어 자료', purpose:'기후변화와 대응 관련 기사·영상·통계를 분석합니다.', tool:'패들렛', url:'https://padlet.com/100ssj/padlet-xgrgnzkt88dv9fdu', action:'자료 보기'},
     {project:'sin', type:'퀴즈', title:'신 프로젝트 연결 퀴즈', purpose:'네 프로젝트의 배움을 종합하고 성찰합니다.', tool:'젭 퀴즈', url:'https://quiz.zep.us/play/Ov3npa', action:'퀴즈 시작'},
-    {project:'sin', type:'검사지', title:'미래 생태 시민 역량 진단', purpose:'문제해결력·디지털 리터러시·생태 감응력을 진단합니다.', tool:'설문', url:null, action:'준비 중'},
+    {project:'sin', type:'검사지', title:'미래 생태 시민 역량 진단', purpose:'문제해결력·디지털 리터러시·생태 감응력을 진단합니다.', tool:'구글 설문지', url:'https://forms.gle/kvVQNmja8TtJFUUf9', action:'설문 참여', secondaryUrl:'https://docs.google.com/forms/d/1sGuKFyi9_-Ui5XfIfBu0HpNY7vjfYzx3BLyAZ7XBor4/copy', secondaryAction:'사본 만들기'},
     {project:'sin', type:'인공지능', title:'기후위기 자료 기반 대화 도구', purpose:'자료에 근거해 기후 위기 질문을 탐색합니다.', tool:'노트북 엘엠', url:'https://notebook.google.com/notebook/bdcd029f-2919-42d3-94c6-709feb2ddfa1?utm_source=gemini_notebook&utm_medium=referral&hl=ko&pli=1', action:'대화 도구 열기'}
   ]
 };
