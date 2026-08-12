@@ -42,11 +42,18 @@
   selectProject('on');
 
   const filterGroup = document.querySelector('.filter-group');
-  const resourceGrid = document.querySelector('#resource-grid');
+  const resourceSections = document.querySelector('#resource-sections');
   const count = document.querySelector('#resource-count');
   const search = document.querySelector('#resource-search');
   const empty = document.querySelector('#empty-state');
   let activeFilter = 'all';
+  let activeCategory = 'teaching';
+  const categoryTabs = [...document.querySelectorAll('[data-category]')];
+  categoryTabs.forEach(button => button.addEventListener('click', () => {
+    activeCategory = button.dataset.category;
+    categoryTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab === button)));
+    renderResources();
+  }));
   [{id:'all',ko:'전체'}, ...data.projects].forEach((item, index) => {
     const button = document.createElement('button'); button.type = 'button'; button.dataset.filter = item.id;
     button.className = index === 0 ? 'active' : ''; button.textContent = item.ko;
@@ -55,10 +62,17 @@
   function setFilter(id) { activeFilter = id; filterGroup.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.filter === id)); renderResources(); }
   function renderResources() {
     const query = search.value.trim().toLocaleLowerCase('ko');
-    const filtered = data.resources.filter(item => (activeFilter === 'all' || item.project === activeFilter) && [item.title,item.purpose,item.tool,item.type].join(' ').toLocaleLowerCase('ko').includes(query));
+    const categoryOf = item => item.category || 'teaching';
+    const filtered = data.resources.filter(item => categoryOf(item) === activeCategory && (activeFilter === 'all' || item.project === activeFilter) && [item.title,item.purpose,item.tool,item.type].join(' ').toLocaleLowerCase('ko').includes(query));
     count.textContent = `총 ${filtered.length}개의 자료`;
     empty.hidden = filtered.length !== 0;
-    resourceGrid.innerHTML = filtered.map(item => `<article class="resource-card ${item.url ? '' : 'pending'}"><div class="resource-top"><span class="project-chip ${item.project}">${projectNames[item.project]}</span><span class="type-chip">${item.type}</span></div><h3>${item.title}</h3><p>${item.purpose}</p><div class="resource-meta"><span>${item.tool}</span>${item.url ? '<span>외부 링크</span>' : '<span>자료 준비 중</span>'}</div><div class="resource-actions">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.title} ${item.action}, 새 창 열림">${item.action}<span aria-hidden="true">↗</span></a>${item.secondaryUrl ? `<a href="${item.secondaryUrl}" target="_blank" rel="noopener noreferrer" aria-label="${item.title} ${item.secondaryAction}, 새 창 열림">${item.secondaryAction}<span aria-hidden="true">↗</span></a>` : ''}` : `<button type="button" disabled>${item.action}</button>`}</div></article>`).join('');
+    const groups = [
+      {id:'teaching', title:'수업 자료·템플릿', description:'교사가 프로젝트 수업을 설계하고 운영할 때 바로 활용하는 자료'},
+      {id:'results', title:'학생 활동 결과물', description:'온·고·지·신 프로젝트에서 학생들이 완성한 탐구와 실천의 기록'}
+    ];
+    const card = item => `<article class="resource-card ${item.preview ? 'has-preview' : ''} ${item.url ? '' : 'pending'}">${item.preview ? `<img class="resource-preview" src="${item.preview}" alt="${item.title} 미리보기" loading="lazy">` : ''}<div class="resource-card-body"><div class="resource-top"><span class="project-chip ${item.project}">${projectNames[item.project]}</span><span class="type-chip">${item.type}</span></div><h3>${item.title}</h3><p>${item.purpose}</p><div class="resource-meta"><span>${item.tool}</span>${item.url ? '<span>외부 링크</span>' : '<span>자료 준비 중</span>'}</div><div class="resource-actions">${item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.title} ${item.action}, 새 창 열림">${item.action}<span aria-hidden="true">↗</span></a>${item.secondaryUrl ? `<a href="${item.secondaryUrl}" target="_blank" rel="noopener noreferrer" aria-label="${item.title} ${item.secondaryAction}, 새 창 열림">${item.secondaryAction}<span aria-hidden="true">↗</span></a>` : ''}` : `<button type="button" disabled>${item.action}</button>`}</div></div></article>`;
+    const group = groups.find(item => item.id === activeCategory);
+    resourceSections.innerHTML = filtered.length ? `<section class="resource-category ${group.id}" aria-labelledby="resource-${group.id}"><header><div><h3 id="resource-${group.id}">${group.title}</h3></div><p>${group.description}</p></header><div class="resource-grid">${filtered.map(card).join('')}</div></section>` : '';
   }
   search.addEventListener('input', renderResources); renderResources();
 
