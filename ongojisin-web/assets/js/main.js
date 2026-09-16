@@ -59,7 +59,13 @@
   }));
   [{id:'all',ko:'전체'}, ...data.projects].forEach((item, index) => {
     const button = document.createElement('button'); button.type = 'button'; button.dataset.filter = item.id;
-    button.className = index === 0 ? 'active' : ''; button.textContent = item.ko;
+    button.className = `${index === 0 ? 'active ' : ''}${item.id === 'all' ? 'filter-all' : 'project-filter'}`;
+    if (item.id === 'all') {
+      button.innerHTML = '<strong>전체 보기</strong><small>네 프로젝트 한눈에</small>';
+    } else {
+      button.style.setProperty('--filter-color', item.color);
+      button.innerHTML = `<span class="filter-monogram">${item.ko}</span><span class="filter-copy"><strong>${item.ko} 프로젝트</strong><small>${item.range}</small></span>`;
+    }
     button.addEventListener('click', () => setFilter(item.id)); filterGroup.append(button);
   });
   function setFilter(id) { activeFilter = id; filterGroup.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.filter === id)); renderResources(); }

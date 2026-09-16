@@ -6,7 +6,7 @@ window.ONGOJISIN_DATA = {
     {id:'sin', ko:'신', tale:'해님달님', sdg:'지속가능발전목표 13', theme:'기후변화와 대응', range:'세계', question:'전 지구적 기후 위기 속에서 탄소중립을 어떻게 달성할까?', grade:'5~6학년', periods:'14차시', subjects:'국어 · 사회 · 도덕', concepts:'기후변화 · 탄소중립 · 상호의존성', assessment:'포트폴리오 · 관찰 평가 · 동료 평가 · 루브릭', standards:'[6국02-03] · [6국06-02] · [6국06-03] · [6사12-02] · [6도04-01]', color:'#7357a8', activities:['탄소 흡수원과 재생에너지를 갖춘 미래 도시 설계','다국어 자막을 포함한 기후변화 짧은 영상 제작','세계 시민 참여 댓글과 생태 보호 임무 실천']}
   ],
   resources: [
-    {project:'on', category:'results', type:'활동 결과물', title:'온 프로젝트 학생 활동 결과물', purpose:'흥부전에서 출발한 육상생태계 보호 탐구와 학생들의 실천 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-on.png', url:'https://padlet.com/100ssj/padlet-f032eo718vug7iqt', action:'프로젝트 전체 보기', stages:[
+    {project:'on', category:'results', type:'활동 결과물', title:'온 프로젝트 학생 활동 결과물', purpose:'흥부전에서 출발한 육상생태계 보호 탐구와 학생들의 실천 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-on.png', url:'https://padlet.com/100ssj/padlet-f032eo718vug7iqt', action:'프로젝트 결과물 한 눈에 보기', stages:[
       {id:'ongo',name:'온고',focus:'흥부전을 함께 읽고 생태 쟁점과 프로젝트 핵심 질문 발견',links:[
         {label:'흥부전 협력 독서',tool:'구글 슬라이드',url:'https://docs.google.com/presentation/d/1r8vfhwUdy-9EZW0gKtYbShPTMro3RTdzz9Z8CWK0lHI/edit?slide=id.g3f9842a5569_0_62#slide=id.g3f9842a5569_0_62'},
         {label:'See–Think–Wonder',tool:'패들렛 샌드박스',url:'https://padlet.com/incodingedu/see-think-wonder-y5yqr2vixc0bzx1z?frame_id=page%3AzfWoTTqV2O_T2LQ-I42Ic'},
@@ -23,7 +23,7 @@ window.ONGOJISIN_DATA = {
         {label:'우리 지역 디지털 에코맵',tool:'패들렛',url:'https://padlet.com/100ssj/on1_21'},
         {label:'우리 학교 E-식물도감',tool:'캔바',url:'https://canva.link/r8pi4s450h5hkdj'}]}
     ]},
-    {project:'go', category:'results', type:'활동 결과물', title:'고 프로젝트 학생 활동 결과물', purpose:'콩쥐팥쥐에서 출발한 지속 가능한 소비와 생산 탐구 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-go.png', url:'https://padlet.com/100ssj/padlet-8uathdm9oxixjc7g', action:'프로젝트 전체 보기', stages:[
+    {project:'go', category:'results', type:'활동 결과물', title:'고 프로젝트 학생 활동 결과물', purpose:'콩쥐팥쥐에서 출발한 지속 가능한 소비와 생산 탐구 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-go.png', url:'https://padlet.com/100ssj/padlet-8uathdm9oxixjc7g', action:'프로젝트 결과물 한 눈에 보기', stages:[
       {id:'ongo',name:'온고',focus:'콩쥐팥쥐를 읽고 자원 낭비와 소비 문제 발견',links:[
         {label:'콩쥐팥쥐 협력 독서',tool:'구글 슬라이드',url:'https://docs.google.com/presentation/d/1SOC83WyNn3XHM6FlSUNWRuXBINYbt4RHBzvbmfkKk_s/edit'},
         {label:'See–Think–Wonder',tool:'패들렛 샌드박스',url:'https://padlet.com/incodingedu/see-think-wonder-y5yqr2vixc0bzx1z?frame_id=page%3A710NZ0KLw3mYMEveNXFG9'},
@@ -38,7 +38,7 @@ window.ONGOJISIN_DATA = {
         {label:'분리수거 배출방법 QR 코드',tool:'패들렛',url:'https://padlet.com/100ssj/on2_21'},
         {label:'쓰레기 무단 투기 방지 포스터',tool:'캔바',url:'https://canva.link/82eur829ryz30cv'}]}
     ]},
-    {project:'ji', category:'results', type:'활동 결과물', title:'지 프로젝트 학생 활동 결과물', purpose:'별주부전에서 출발한 해양생태계 보존 탐구와 학생들의 제작 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-ji.png', url:'https://padlet.com/100ssj/padlet-ist8hnleu591s42i', action:'프로젝트 전체 보기', stages:[
+    {project:'ji', category:'results', type:'활동 결과물', title:'지 프로젝트 학생 활동 결과물', purpose:'별주부전에서 출발한 해양생태계 보존 탐구와 학생들의 제작 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-ji.png', url:'https://padlet.com/100ssj/padlet-ist8hnleu591s42i', action:'프로젝트 결과물 한 눈에 보기', stages:[
       {id:'ongo',name:'온고',focus:'별주부전을 읽고 우리나라 해양 생태 문제 발견',links:[
         {label:'별주부전 협력 독서',tool:'구글 슬라이드',url:'https://docs.google.com/presentation/d/1gWO1A0fZ2IOHq9uslk8pR98givv1k4u_nmuR_9FLBGY/edit?slide=id.p#slide=id.p'},
         {label:'See–Think–Wonder',tool:'패들렛 샌드박스',url:'https://padlet.com/incodingedu/see-think-wonder-y5yqr2vixc0bzx1z?frame_id=page%3A3Ln_XLJr80YMH2EDarXLi'},
@@ -53,7 +53,7 @@ window.ONGOJISIN_DATA = {
         {label:'플로깅 실천 기록 웹앱 ①',tool:'구글 앱스 스크립트',url:'https://script.google.com/macros/s/AKfycbyip1PHKNuhWqVTlsPvF4FYx3IXhDlgJ99MVOgElUNwvrWoy3a0XSBuayqpeF7BGu2Ehg/exec'},
         {label:'플로깅 실천 기록 웹앱 ②',tool:'구글 앱스 스크립트',url:'https://script.google.com/macros/s/AKfycbyE84xQteO0Cs5VsKWkc0V_bZknIAcyGDXSlt1y0LSdC5mzqvKAZH-dy2VReGOFjo_AeA/exec'}]}
     ]},
-    {project:'sin', category:'results', type:'활동 결과물', title:'신 프로젝트 학생 활동 결과물', purpose:'해님달님에서 출발한 기후변화 대응 탐구와 생활 속 실천 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-sin.png', url:'https://padlet.com/100ssj/padlet-ubezgp9p5dglmfr0', action:'프로젝트 전체 보기', stages:[
+    {project:'sin', category:'results', type:'활동 결과물', title:'신 프로젝트 학생 활동 결과물', purpose:'해님달님에서 출발한 기후변화 대응 탐구와 생활 속 실천 결과를 확인합니다.', tool:'패들렛', preview:'assets/images/resource-preview-sin.png', url:'https://padlet.com/100ssj/padlet-ubezgp9p5dglmfr0', action:'프로젝트 결과물 한 눈에 보기', stages:[
       {id:'ongo',name:'온고',focus:'해님달님을 읽고 전 지구적 기후 문제 발견',links:[
         {label:'해님달님 협력 독서',tool:'구글 슬라이드',url:'https://docs.google.com/presentation/d/1bqCaqXe3NzI4LA_pDEVTba6SOcWlfvKHSryDZv0drLI/edit?usp=sharing'},
         {label:'See–Think–Wonder',tool:'패들렛 샌드박스',url:'https://padlet.com/incodingedu/see-think-wonder-y5yqr2vixc0bzx1z'},
