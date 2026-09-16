@@ -47,19 +47,31 @@
   const count = document.querySelector('#resource-count');
   const search = document.querySelector('#resource-search');
   const empty = document.querySelector('#empty-state');
-  let activeFilter = 'all';
-  let activeCategory = 'teaching';
-  let activeType = 'all';
+  const resourceParams = new URLSearchParams(window.location.search);
+  const validProjectIds = new Set(data.projects.map(project => project.id));
+  const validStageIds = new Set(['ongo','gochal','jihye','hyeoksin']);
+  let activeFilter = validProjectIds.has(resourceParams.get('project')) ? resourceParams.get('project') : 'all';
+  let activeCategory = resourceParams.get('view') === 'results' ? 'results' : 'teaching';
+  let activeType = activeCategory === 'results' && validStageIds.has(resourceParams.get('stage')) ? resourceParams.get('stage') : 'all';
+  function syncResourceUrl() {
+    const url = new URL(window.location.href);
+    url.searchParams.set('view', activeCategory);
+    activeFilter === 'all' ? url.searchParams.delete('project') : url.searchParams.set('project', activeFilter);
+    activeCategory === 'results' && activeType !== 'all' ? url.searchParams.set('stage', activeType) : url.searchParams.delete('stage');
+    url.hash = 'resources';
+    history.replaceState(null, '', url);
+  }
   const categoryTabs = [...document.querySelectorAll('[data-category]')];
+  categoryTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.dataset.category === activeCategory)));
   categoryTabs.forEach(button => button.addEventListener('click', () => {
     activeCategory = button.dataset.category;
     activeType = 'all';
     categoryTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab === button)));
-    renderTypeFilters(); renderResources();
+    renderTypeFilters(); renderResources(); syncResourceUrl();
   }));
   [{id:'all',ko:'전체'}, ...data.projects].forEach((item, index) => {
     const button = document.createElement('button'); button.type = 'button'; button.dataset.filter = item.id;
-    button.className = `${index === 0 ? 'active ' : ''}${item.id === 'all' ? 'filter-all' : 'project-filter'}`;
+    button.className = `${item.id === activeFilter ? 'active ' : ''}${item.id === 'all' ? 'filter-all' : 'project-filter'}`;
     if (item.id === 'all') {
       button.innerHTML = '<strong>전체 보기</strong><small>네 프로젝트 한눈에</small>';
     } else {
@@ -68,14 +80,14 @@
     }
     button.addEventListener('click', () => setFilter(item.id)); filterGroup.append(button);
   });
-  function setFilter(id) { activeFilter = id; filterGroup.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.filter === id)); renderResources(); }
+  function setFilter(id) { activeFilter = id; filterGroup.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.filter === id)); renderResources(); syncResourceUrl(); }
   function renderTypeFilters() {
     const categoryOf = item => item.category || 'teaching';
     const filters = activeCategory === 'results'
       ? [{id:'all',label:'모든 단계'},{id:'ongo',label:'온고'},{id:'gochal',label:'고찰'},{id:'jihye',label:'지혜'},{id:'hyeoksin',label:'혁신'}]
       : [{id:'all',label:'모든 유형'}, ...[...new Set(data.resources.filter(item => categoryOf(item) === activeCategory).map(item => item.type))].map(type => ({id:type,label:type}))];
     typeFilterGroup.innerHTML = filters.map(item => `<button type="button" data-type="${item.id}" class="${item.id === activeType ? 'active' : ''}">${item.label}</button>`).join('');
-    typeFilterGroup.querySelectorAll('button').forEach(button => button.addEventListener('click', () => { activeType = button.dataset.type; renderTypeFilters(); renderResources(); }));
+    typeFilterGroup.querySelectorAll('button').forEach(button => button.addEventListener('click', () => { activeType = button.dataset.type; renderTypeFilters(); renderResources(); syncResourceUrl(); }));
   }
   function renderResources() {
     const query = search.value.trim().toLocaleLowerCase('ko');
