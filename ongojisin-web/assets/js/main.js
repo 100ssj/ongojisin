@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const data = window.ONGOJISIN_DATA;
-  const projectNames = Object.fromEntries(data.projects.map(p => [p.id, p.ko]));
+  const projectNames = {...Object.fromEntries(data.projects.map(p => [p.id, p.ko])), common:'공통'};
   const menuButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.primary-nav');
 
@@ -98,7 +98,7 @@
   function renderResources() {
     const query = search.value.trim().toLocaleLowerCase('ko');
     const categoryOf = item => item.category || 'teaching';
-    const filtered = data.resources.filter(item => categoryOf(item) === activeCategory && (activeFilter === 'all' || item.project === activeFilter) && (activeCategory === 'results' || activeType === 'all' || item.type === activeType) && [item.title,item.purpose,item.tool,item.type,...(item.stages || []).map(stage => `${stage.name} ${stage.focus}`)].join(' ').toLocaleLowerCase('ko').includes(query));
+    const filtered = data.resources.filter(item => categoryOf(item) === activeCategory && (activeFilter === 'all' || item.project === activeFilter || item.project === 'common') && (activeCategory === 'results' || activeType === 'all' || item.type === activeType) && [item.title,item.purpose,item.tool,item.type,...(item.stages || []).map(stage => `${stage.name} ${stage.focus}`)].join(' ').toLocaleLowerCase('ko').includes(query));
     if (activeCategory === 'results') {
       const stageCount = filtered.reduce((total, item) => total + (activeType === 'all' ? item.stages.length : item.stages.filter(stage => stage.id === activeType).length), 0);
       count.textContent = `${filtered.length}개 프로젝트 · ${stageCount}개 단계 결과물`;
