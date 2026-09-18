@@ -50,14 +50,20 @@
   const resourceParams = new URLSearchParams(window.location.search);
   const validProjectIds = new Set(data.projects.map(project => project.id));
   const validStageIds = new Set(['ongo','gochal','jihye','hyeoksin']);
+  const teachingTypes = new Set(data.resources.filter(item => (item.category || 'teaching') === 'teaching').map(item => item.type));
+  const teachingTypeAliases = {'lesson-plan':'교수·학습과정안'};
+  const requestedTeachingType = teachingTypeAliases[resourceParams.get('type')] || resourceParams.get('type');
   let activeFilter = validProjectIds.has(resourceParams.get('project')) ? resourceParams.get('project') : 'all';
   let activeCategory = resourceParams.get('view') === 'results' ? 'results' : 'teaching';
-  let activeType = activeCategory === 'results' && validStageIds.has(resourceParams.get('stage')) ? resourceParams.get('stage') : 'all';
+  let activeType = activeCategory === 'results'
+    ? (validStageIds.has(resourceParams.get('stage')) ? resourceParams.get('stage') : 'all')
+    : (teachingTypes.has(requestedTeachingType) ? requestedTeachingType : 'all');
   function syncResourceUrl() {
     const url = new URL(window.location.href);
     url.searchParams.set('view', activeCategory);
     activeFilter === 'all' ? url.searchParams.delete('project') : url.searchParams.set('project', activeFilter);
     activeCategory === 'results' && activeType !== 'all' ? url.searchParams.set('stage', activeType) : url.searchParams.delete('stage');
+    activeCategory === 'teaching' && activeType !== 'all' ? url.searchParams.set('type', activeType === '교수·학습과정안' ? 'lesson-plan' : activeType) : url.searchParams.delete('type');
     url.hash = 'resources';
     history.replaceState(null, '', url);
   }
