@@ -67,6 +67,10 @@ window.ONGOJISIN_DATA = {
         {label:'세계 시민 참여 유도 댓글 달기 ①',tool:'패들렛',url:'https://padlet.com/100ssj/on4_11'},
         {label:'세계 시민 참여 유도 댓글 달기 ②',tool:'패들렛',url:'https://padlet.com/100ssj/on4_21'}]}
     ]},
+    {project:'on', category:'teaching', type:'교수·학습과정안', title:'온 프로젝트 교수·학습과정안', purpose:'흥부전에서 출발해 우리가 사는 곳의 육상 생태계를 탐구하는 수업 흐름과 활동 설계입니다.', tool:'PDF', preview:'assets/images/lesson-plan-on-preview.png', url:'assets/docs/lesson-plan-on.pdf', action:'과정안 열기'},
+    {project:'go', category:'teaching', type:'교수·학습과정안', title:'고 프로젝트 교수·학습과정안', purpose:'콩쥐팥쥐에서 출발해 우리 지역의 지속가능한 소비와 생산을 탐구하는 수업 설계입니다.', tool:'PDF', preview:'assets/images/lesson-plan-go-preview.png', url:'assets/docs/lesson-plan-go.pdf', action:'과정안 열기'},
+    {project:'ji', category:'teaching', type:'교수·학습과정안', title:'지 프로젝트 교수·학습과정안', purpose:'별주부전에서 출발해 우리나라의 해양 생태계 보전을 탐구하는 수업 설계입니다.', tool:'PDF', preview:'assets/images/lesson-plan-ji-preview.png', url:'assets/docs/lesson-plan-ji.pdf', action:'과정안 열기'},
+    {project:'sin', category:'teaching', type:'교수·학습과정안', title:'신 프로젝트 교수·학습과정안', purpose:'해님달님에서 출발해 세계의 기후변화 대응을 탐구하는 수업 흐름과 활동 설계입니다.', tool:'PDF', preview:'assets/images/lesson-plan-sin-preview.png', url:'assets/docs/lesson-plan-sin.pdf', action:'과정안 열기'},
     {project:'on', type:'슬라이드', title:'흥부전 프로젝트 수업 슬라이드', purpose:'전래동화 속 생태 쟁점을 발견하고 핵심 질문을 구성합니다.', tool:'구글 슬라이드', preview:'assets/images/resource-preview-slide-on.png', url:'https://docs.google.com/presentation/d/1r8vfhwUdy-9EZW0gKtYbShPTMro3RTdzz9Z8CWK0lHI/copy', action:'사본 만들기'},
     {project:'on', category:'teaching', type:'퀴즈', title:'온 프로젝트 연결 퀴즈', purpose:'학습을 정리하고 다음 탐구로 연결합니다.', tool:'젭 퀴즈', preview:'assets/images/resource-preview-quiz-on.png', url:'https://quiz.zep.us/play/N3qbp7', action:'퀴즈 시작'},
     {project:'on', type:'템플릿', title:'관찰·생각·질문 탐구판', purpose:'이미지를 관찰하고 생각과 질문을 구조화합니다.', tool:'패들렛', preview:'assets/images/resource-preview-template-see.png', url:'https://padlet.com/100ssj/see-think-wonder-dl5ivjdrqcjde6r3', action:'템플릿 보기'},

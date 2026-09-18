@@ -91,6 +91,7 @@ p,li,dd,small{line-height:1.75}
 
 /* 자료 유형 필터 */
 .type-filter-group{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0}.type-filter-group button{min-height:38px;padding:0 16px;border:1px solid var(--line);border-radius:20px;background:#fff;color:var(--muted);font-size:12px;font-weight:700;cursor:pointer}.type-filter-group button:hover,.type-filter-group button.active{border-color:var(--green);background:var(--green);color:#fff}
+.type-filter-group button.lesson-plan-filter{border-color:#c47a22;background:#fff7e8;color:#9a5a13}.type-filter-group button.lesson-plan-filter:hover,.type-filter-group button.lesson-plan-filter.active{border-color:#c47a22;background:#c47a22;color:#fff}.resource-card.lesson-plan-card{border-top:4px solid #c47a22}.resource-card.lesson-plan-card .type-chip{background:#fff0d7;color:#9a5a13}
 @media(max-width:900px){.filter-group{grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.filter-group .filter-all{grid-column:1/-1}.resource-tools .filter-group button{height:auto}}
 @media(max-width:580px){.resource-tools{padding:14px}.filter-group{grid-template-columns:1fr}.filter-group .filter-all{grid-column:auto}.resource-tools .filter-group button{min-height:62px}.type-filter-group{margin-inline:-2px}}
 
